@@ -28,8 +28,8 @@ app.use(morgan('combined')); // logging middleware.
 app.use(express.json());
 
 // API Routing
-app.use(planetsRouter);
-app.use(launchesRouter);
+app.use('/planets', planetsRouter);
+app.use('/launches', launchesRouter);
 
 // Client Routing.
 app.use(express.static(path.join(__dirname, '..', 'public')));
